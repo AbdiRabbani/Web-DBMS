@@ -36,14 +36,14 @@ if (result >= 5) {
 cakupan kode agar bisa mengakses atau membatasi
 */
 
-var a = "Hello my friend"
+var a = "Hello my friend"  //global scope
 
 function hi() {
     console.log(a)
 }
 
 function hi2() {
-    a = "nilainya sudah di rubah"
+    a = "nilainya sudah di rubah"  //local scope
     console.log(a)
 }
 
@@ -59,7 +59,7 @@ const car = "toyota"
 function kendaraan() {
     console.log(car)
     if (true) {
-        const motor = "honda"
+        const motor = "honda" //blog scope
 
         console.log(motor) //bisa di panggil karena satu scope
     }
@@ -67,3 +67,20 @@ function kendaraan() {
 }
 
 kendaraan()
+
+
+
+
+
+var x = "x"
+const z = "z"
+function test() {
+    let y = "y"
+    console.log(z)
+    if (true) {
+        console.log(y)
+    }
+}
+console.log(x)
+test()
+
