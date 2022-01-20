@@ -36,14 +36,14 @@ if (result >= 5) {
 cakupan kode agar bisa mengakses atau membatasi
 */
 
-var a = "Hello my friend"  //global scope
+var a = "Hello my friend" //global scope
 
 function hi() {
     console.log(a)
 }
 
 function hi2() {
-    a = "nilainya sudah di rubah"  //local scope
+    a = "nilainya sudah di rubah" //local scope
     console.log(a)
 }
 
@@ -59,11 +59,11 @@ const car = "toyota"
 function kendaraan() {
     console.log(car)
     if (true) {
-        const motor = "honda" //blog scope
+        const motor = "honda" //block scope
 
         console.log(motor) //bisa di panggil karena satu scope
     }
-    /*console.log(motor)*/  //tidak bisa karenanmenggunakan const di luar scope
+    /*console.log(motor)*/ //tidak bisa karenanmenggunakan const di luar scope
 }
 
 kendaraan()
@@ -72,15 +72,33 @@ kendaraan()
 
 
 
-var x = "x"
-const z = "z"
-function test() {
-    let y = "y"
-    console.log(z)
-    if (true) {
-        console.log(y)
+// var x = "x"
+// const z = "z"
+// function test() {
+//     let y = "y"
+//     console.log(z)
+//     if (true) {
+//         console.log(y)
+//         const c = "c"
+//         console.log(c)
+//     }
+// }
+// console.log(x)
+// test()
+
+
+//!closure
+/*
+closure adalah cara mengakses variable dari parent scope di dalam child scope parent
+*/
+
+function me(nama, kelas) {
+    var text = 'nama : ' + nama + "\nkelas : " + kelas
+    return function(){
+        console.log(text)
     }
 }
-console.log(x)
-test()
 
+var saya = me("abdi","x-rpl-a")
+
+saya()
