@@ -180,16 +180,16 @@ console.log(identitas['adress']['city'])
 
 let kendaraan2 = {
     kendaraan : {
-        mobil : "supra",
-        motor : "Rx-King",
-        sepedah : "Pacific"        
+        mobil : "peugeot",
+        motor : "v-xion",
+        sepedah : "united"        
     },
     jalan : "Jalan Berkah",
-    kota : "atas langit",
-    platNomor : "A 8 DI",
+    kota : "Bekasi",
+    platNomor : "Jabotabek",
     kereta : {
-       namaKa : "Maglev",
-        tujuan : "Surga" 
+       namaKa : "Argo Bromo Anggrek",
+        tujuan : "Senen Pasar Turi" 
     }
 }
 
