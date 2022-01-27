@@ -94,11 +94,105 @@ closure adalah cara mengakses variable dari parent scope di dalam child scope pa
 
 function me(nama, kelas) {
     var text = 'nama : ' + nama + "\nkelas : " + kelas
-    return function(){
+    return function () {
         console.log(text)
     }
 }
 
-var saya = me("abdi","x-rpl-a")
+var saya = me("abdi", "x-rpl-a")
 
 saya()
+
+
+
+//!  Tipe data undifined
+
+
+let aaaa
+
+function firs(params) {
+    aaaa = "This first function"
+    console.log(aaaa)
+}
+
+function seccond1(params) {
+    aaaa = "This seccond function" 
+    console.log(aaaa)   
+}
+
+firs()
+seccond1()
+
+//! Tipe data null
+
+let Null = null
+
+console.log(Null)
+
+//! Number
+/*
+ Rentang nilai yang bisa di tamoung oleh tipe data number
+*/
+
+//! NaN
+/*
+Not a Number
+*/
+
+let nan = 17
+if (nan >= 17) {
+    a = 'anda blm cukup umur'
+    console.log(nan/2)
+}else{
+    a = 'anda sudah cukup umur'
+    console.log(nan)
+}
+
+//! Object
+
+let identitas = {
+    firstName : 'Abdi',
+    lastName : 'Rabbani',
+    email : 'abdirabbani59@gmail.com',
+    insagram : 'abri_r_bani',
+    linkedin : 'AbdiRabbani',
+    phone : 'Iphone',
+    adress : {
+        city : 'Bekasi',
+        number : '17',
+        street : 'jalan sini'
+    }
+}
+
+//* Cara memanggil object
+console.log('firstName : ' + identitas.firstName)
+console.log('My House in :' + identitas.adress.city)
+
+
+//* Menggunakan array
+console.log(identitas['firstName'])
+console.log(identitas['adress']['city'])
+
+//* bikin tabel
+
+// console.table(identitas)
+
+
+let kendaraan2 = {
+    kendaraan : {
+        mobil : "peugeot",
+        motor : "v-xion",
+        sepedah : "united"        
+    },
+    jalan : "Jalan Berkah",
+    kota : "atas langit",
+    platNomor : "A 8 DI",
+    kereta : {
+       namaKa : "Maglev",
+        tujuan : "Surga" 
+    }
+}
+
+console.table(kendaraan2)
+
+
